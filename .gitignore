@@ -19,3 +19,6 @@ out/
 npm-debug.log*
 .DS_Store
 *.tsbuildinfo
+
+# Vercel CLI local project link
+.vercel/
