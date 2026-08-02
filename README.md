@@ -1,5 +1,11 @@
 # STREAMAI — Real-Time Streaming AI Chatbot
 
+> **🚀 Live demo:** [https://stream-ai-chat.vercel.app](https://stream-ai-chat.vercel.app)
+>
+> [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel&logoColor=white&labelColor=%23000&color=%2322d3ee)](https://stream-ai-chat.vercel.app)
+> [![Next.js](https://img.shields.io/badge/Next.js%2015-000000?style=flat&logo=nextdotjs&logoColor=white&color=%23a855f7)](https://nextjs.org)
+> [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat&logo=typescript&logoColor=white&color=%23089b8a)]()
+
 A futuristic, cyberpunk-styled AI chat application built with **Next.js 15 (App Router)**, **React 19**, and the **Vercel AI SDK**. It streams responses token-by-token from **Google Gemini** and **OpenRouter (Nemotron)** straight into a neon-soaked 3D interface.
 
 ![STREAMAI banner](assets/banner.svg)
@@ -144,6 +150,14 @@ assets/              # README diagrams
 ## Developed by **Muhammad Asif Nawaz**
 
 Built with care, caffeine, and far too many shades of cyan and magenta.
+
+The chatbot knows who its creator is — just ask it **"who made you?"** or **"tell me about your developer"** and it will introduce Muhammad Asif Nawaz with the details below.
+
+**Connect with me:**
+- 💼 **LinkedIn:** [muhammad-asif-nawaz-](https://www.linkedin.com/in/muhammad-asif-nawaz-)
+- 🐙 **GitHub:** [asifnawaz23](https://github.com/asifnawaz23)
+- ✉️ **Email:** [masifnawaz815@gmail.com](mailto:masifnawaz815@gmail.com)
+- 🌐 **Live project:** [stream-ai-chat.vercel.app](https://stream-ai-chat.vercel.app)
 
 ---
 
