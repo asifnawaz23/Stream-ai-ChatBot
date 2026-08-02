@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+
+# environment (API keys must never be committed)
+.env
+.env*.local
+
+# keep the example env file
+!.env.example
+
+# local app cache (never a project file)
+.freebuff/
+
+# misc
+npm-debug.log*
+.DS_Store
+*.tsbuildinfo

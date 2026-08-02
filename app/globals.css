@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-[#05060d] text-zinc-100 antialiased;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-space), var(--font-inter), sans-serif;
+}
+
+/* ============================================================
+   Cyberpunk neon glass system
+   ============================================================ */
+
+/* Frosted dark panel with cyan edge glow */
+.neon-panel {
+  background: linear-gradient(
+    165deg,
+    rgb(20 26 46 / 0.72),
+    rgb(10 12 24 / 0.85)
+  );
+  border: 1px solid rgb(34 211 238 / 0.16);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  box-shadow:
+    0 20px 50px -20px rgb(0 0 0 / 0.85),
+    0 0 18px -6px rgb(34 211 238 / 0.25),
+    inset 0 1px 0 0 rgb(255 255 255 / 0.06);
+}
+
+/* Animated flowing neon gradient border */
+.neon-border {
+  position: relative;
+}
+.neon-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    115deg,
+    #22d3ee,
+    #7c3aed 35%,
+    #ec4899 70%,
+    #22d3ee
+  );
+  background-size: 300% 100%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.75;
+  animation: border-flow 5s linear infinite;
+  z-index: 1;
+}
+
+/* Glossy neon orb avatar */
+.neon-orb {
+  background:
+    radial-gradient(circle at 32% 26%, rgb(255 255 255 / 0.85), transparent 40%),
+    radial-gradient(circle at 70% 88%, rgb(236 72 153 / 0.5), transparent 52%),
+    linear-gradient(140deg, #06b6d4, #6366f1 50%, #c026d3);
+  box-shadow:
+    0 0 22px -4px rgb(34 211 238 / 0.9),
+    0 0 44px -8px rgb(124 58 237 / 0.8),
+    0 10px 24px -12px rgb(0 0 0 / 0.8),
+    inset 0 1px 2px 0 rgb(255 255 255 / 0.6);
+}
+
+/* Neon gradient text */
+.text-neon {
+  background: linear-gradient(95deg, #67e8f9, #a78bfa 45%, #f472b6 80%, #67e8f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgb(34 211 238 / 0.35));
+}
+
+/* Uppercase HUD label */
+.hud-label {
+  font-family: var(--font-space), var(--font-inter), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+/* ============================================================
+   Animated cyberpunk background layers
+   ============================================================ */
+
+.cyber-bg {
+  background-color: #05060d;
+  background-image:
+    radial-gradient(1100px 560px at 85% -10%, rgb(34 211 238 / 0.14), transparent 60%),
+    radial-gradient(900px 520px at -5% 15%, rgb(236 72 153 / 0.12), transparent 55%),
+    radial-gradient(760px 720px at 105% 110%, rgb(124 58 237 / 0.16), transparent 62%);
+}
+
+/* Twinkling starfield (3 parallax layers) */
+.starfield,
+.starfield::before,
+.starfield::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+}
+.starfield {
+  background-image:
+    radial-gradient(1.2px 1.2px at 25px 35px, rgb(255 255 255 / 0.9), transparent 100%),
+    radial-gradient(1px 1px at 90px 140px, rgb(103 232 249 / 0.8), transparent 100%),
+    radial-gradient(1.4px 1.4px at 170px 60px, rgb(255 255 255 / 0.7), transparent 100%),
+    radial-gradient(1px 1px at 240px 180px, rgb(232 121 249 / 0.7), transparent 100%);
+  background-size: 300px 300px;
+  animation: twinkle 5s ease-in-out infinite;
+}
+.starfield::before {
+  background-image:
+    radial-gradient(1px 1px at 60px 90px, rgb(255 255 255 / 0.8), transparent 100%),
+    radial-gradient(1.3px 1.3px at 150px 210px, rgb(103 232 249 / 0.7), transparent 100%),
+    radial-gradient(1px 1px at 220px 20px, rgb(255 255 255 / 0.6), transparent 100%),
+    radial-gradient(1.1px 1.1px at 30px 240px, rgb(232 121 249 / 0.6), transparent 100%);
+  background-size: 260px 260px;
+  animation: twinkle 7s ease-in-out -2s infinite;
+}
+.starfield::after {
+  background-image:
+    radial-gradient(1px 1px at 110px 30px, rgb(255 255 255 / 0.7), transparent 100%),
+    radial-gradient(1.2px 1.2px at 190px 150px, rgb(103 232 249 / 0.6), transparent 100%),
+    radial-gradient(1px 1px at 250px 100px, rgb(255 255 255 / 0.8), transparent 100%);
+  background-size: 340px 340px;
+  animation: twinkle 9s ease-in-out -4s infinite;
+}
+
+/* Perspective neon grid floor */
+.neon-grid {
+  background-image:
+    linear-gradient(rgb(34 211 238 / 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(34 211 238 / 0.3) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(55% 65% at 50% 100%, #000 15%, transparent 72%);
+  mask-image: radial-gradient(55% 65% at 50% 100%, #000 15%, transparent 72%);
+  transform: perspective(480px) rotateX(60deg);
+  transform-origin: 50% 100%;
+  animation: grid-scroll 1.4s linear infinite;
+  filter: drop-shadow(0 -8px 24px rgb(34 211 238 / 0.35));
+}
+
+/* CRT scanlines overlay */
+.scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0.015) 0px,
+    rgb(0 0 0 / 0.12) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
+/* Sweeping scan beam */
+.scan-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(34 211 238 / 0.05),
+    transparent
+  );
+  animation: scan-beam 7s linear infinite;
+}
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes grid-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 46px;
+  }
+}
+
+@keyframes scan-beam {
+  0% {
+    transform: translateY(-160px);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
+
+@keyframes border-flow {
+  to {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  93%,
+  100% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 0.55;
+  }
+  96% {
+    opacity: 0.85;
+  }
+  97% {
+    opacity: 0.6;
+  }
+}
+
+/* Slim neon scrollbar */
+.scroll-slim {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(34 211 238 / 0.5) transparent;
+}
+.scroll-slim::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-slim::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: linear-gradient(
+    180deg,
+    rgb(34 211 238 / 0.6),
+    rgb(236 72 153 / 0.5)
+  );
+}
+.scroll-slim::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(34 211 238 / 0.9),
+    rgb(236 72 153 / 0.8)
+  );
+}
+
+/* Monospace stack for markdown code */
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}

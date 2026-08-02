@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="STREAMAI - Neural interface streaming chat banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07070f"/>
+      <stop offset="0.55" stop-color="#0a0a18"/>
+      <stop offset="1" stop-color="#05050a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.72" cy="0.42" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="0.6" stop-color="#a855f7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#e879f9"/>
+    </linearGradient>
+    <linearGradient id="sub" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#64748b"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect width="1200" height="420" fill="url(#glow)"/>
+
+  <!-- perspective grid -->
+  <g stroke="#22d3ee" stroke-opacity="0.18" stroke-width="1">
+    <path d="M-80 300 H1280" fill="none"/>
+    <path d="M-120 330 H1320" fill="none"/>
+    <path d="M-160 360 H1360" fill="none"/>
+    <path d="M-200 390 H1400" fill="none"/>
+    <path d="M-240 420 H1440" fill="none"/>
+    <path d="M0 420 L620 150 M200 420 L680 150 M400 420 L740 150 M600 420 L800 150 M800 420 L860 150 M1000 420 L920 150 M1200 420 L980 150" fill="none"/>
+  </g>
+
+  <!-- scanlines -->
+  <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="1">
+    <path d="M0 20 H1200 M0 40 H1200 M0 60 H1200 M0 80 H1200 M0 100 H1200 M0 120 H1200 M0 140 H1200 M0 160 H1200 M0 180 H1200 M0 200 H1200 M0 220 H1200 M0 240 H1200 M0 260 H1200 M0 280 H1200 M0 300 H1200 M0 320 H1200 M0 340 H1200 M0 360 H1200 M0 380 H1200 M0 400 H1200" fill="none"/>
+  </g>
+
+  <!-- hologram: orbiting rings -->
+  <g transform="translate(880 190)">
+    <g fill="none" stroke="#22d3ee" stroke-opacity="0.55" stroke-width="1.4">
+      <ellipse rx="150" ry="52" stroke-dasharray="10 6"/>
+      <ellipse rx="150" ry="52" transform="rotate(30)"/>
+      <ellipse rx="150" ry="52" transform="rotate(-30)"/>
+    </g>
+    <g fill="none" stroke="#e879f9" stroke-opacity="0.5" stroke-width="1.2">
+      <ellipse rx="100" ry="36" stroke-dasharray="8 5"/>
+      <ellipse rx="100" ry="36" transform="rotate(60)"/>
+    </g>
+    <circle r="56" fill="none" stroke="#a855f7" stroke-opacity="0.6" stroke-width="1.4"/>
+    <circle r="18" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="1.6"/>
+    <circle r="4" fill="#e879f9"/>
+    <circle cx="150" cy="0" r="4" fill="#22d3ee"/>
+    <circle cx="-150" cy="0" r="3" fill="#a855f7"/>
+  </g>
+
+  <!-- wordmark -->
+  <g>
+    <text x="80" y="185" font-family="'Segoe UI', Arial, sans-serif" font-size="86" font-weight="700" letter-spacing="6" fill="url(#title)">STREAMAI</text>
+    <text x="82" y="230" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="12" fill="url(#sub)">NEURAL INTERFACE</text>
+    <text x="82" y="258" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="4" fill="#475569">REAL-TIME STREAMING CHAT  ·  GEMINI  +  NEMOTRON</text>
+    <rect x="82" y="290" width="300" height="3" rx="1.5" fill="url(#title)"/>
+    <text x="82" y="330" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="500" letter-spacing="2" fill="#64748b">DEVELOPED BY</text>
+    <text x="82" y="358" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3" fill="#67e8f9">MUHAMMAD ASIF NAWAZ</text>
+  </g>
+</svg>
